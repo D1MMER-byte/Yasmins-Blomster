@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yasmins Blomster · Sønder Omme</title>
+  <meta name="description" content="Buketter, planter, bryllups- og sorgbinderi fra Hovedgaden 4 i Sønder Omme. Bestil online med levering, eller kom forbi butikken.">
+  <meta name="theme-color" content="#11130f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#indhold">Spring til indhold</a>
+
+  <header class="bar" id="top">
+    <a class="wordmark" href="#top" aria-label="Yasmins Blomster, til toppen">Yasmins Blomster</a>
+    <nav class="bar-links" aria-label="Hovedmenu">
+      <a href="#webshop">Webshop</a>
+      <a href="#buket">Bind en buket</a>
+      <a href="#lejligheder">Lejligheder</a>
+      <a href="#butikken">Butikken</a>
+    </nav>
+    <a class="btn btn-small" href="#buket">Bestil</a>
+  </header>
+
+  <main id="indhold">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <h1 id="hero-title" class="display">Yasmins Blomster</h1>
+        <p class="hero-lede">Buketter, planter og binderi fra Hovedgaden&nbsp;4 i Sønder&nbsp;Omme. Bestil online med levering, eller kom forbi butikken.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#buket">Bind din buket</a>
+          <a class="link" href="#butikken">Find butikken</a>
+        </div>
+        <p class="hero-open" data-open-status>Hovedgaden 4 · 7260 Sønder Omme</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <canvas class="pollen"></canvas>
+        <svg class="branch" viewBox="0 0 600 720" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </section>
+
+    <!-- NAVNET -->
+    <section class="name" aria-labelledby="name-title">
+      <div class="name-grid">
+        <h2 id="name-title" class="h2">Yasmin betyder jasmin</h2>
+        <div class="name-body">
+          <blockquote class="statement">En hvid blomst, der dufter stærkest, når det bliver mørkt. Den slags blomster binder vi: dem, man husker bagefter.</blockquote>
+          <p>Siden 2021 har vi bundet buketter i Hovedgaden til fødselsdage, bryllupper, afskeder og helt almindelige tirsdage. Vi køber ind flere gange om ugen, så det, du får med hjem, er friskt, og det, vi binder, passer til årstiden: tulipaner og anemoner i foråret, pæoner i juni, lyng og hyben, når heden omkring byen bliver lilla.</p>
+        </div>
+        <figure class="name-plate">
+          <svg class="plate" viewBox="0 0 400 520" aria-hidden="true"></svg>
+          <figcaption>Jasminum officinale, almindelig jasmin</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- WEBSHOP -->
+    <section class="shop" id="webshop" aria-labelledby="shop-title">
+      <div class="shop-head">
+        <h2 id="shop-title" class="h2">Webshoppen</h2>
+        <p>Bestil inden kl. 12, så leverer vi samme dag i Sønder Omme, Grindsted, Vorbasse og Billund. Du kan også hente i butikken.</p>
+      </div>
+      <ul class="shop-list" role="list">
+        <li class="item">
+          <svg class="item-art" viewBox="0 0 120 120" data-art="season" aria-hidden="true"></svg>
+          <div class="item-text">
+            <h3>Sæsonbuket</h3>
+            <p>Det bedste fra ugens indkøb, bundet af Yasmin. Ingen buket bliver ens.</p>
+          </div>
+          <p class="item-price">fra 249 kr.</p>
+          <a class="item-go" href="#buket" data-preset="season" aria-label="Bestil sæsonbuket">Bestil</a>
+        </li>
+        <li class="item">
+          <svg class="item-art" viewBox="0 0 120 120" data-art="roses" aria-hidden="true"></svg>
+          <div class="item-text">
+            <h3>Roser, dybrøde</h3>
+            <p>Ti eller tyve lange roser med grønt, bundet stramt eller løst, som du vil.</p>
+          </div>
+          <p class="item-price">fra 299 kr.</p>
+          <a class="item-go" href="#buket" data-preset="red" aria-label="Bestil roser">Bestil</a>
+        </li>
+        <li class="item">
+          <svg class="item-art" viewBox="0 0 120 120" data-art="orchid" aria-hidden="true"></svg>
+          <div class="item-text">
+            <h3>Orkidé i keramikpotte</h3>
+            <p>Hvid phalaenopsis med to grene, plantet i en mat potte. Blomstrer i måneder.</p>
+          </div>
+          <p class="item-price">349 kr.</p>
+          <a class="item-go" href="#butikken" aria-label="Spørg om orkidé i butikken">Spørg os</a>
+        </li>
+        <li class="item">
+          <svg class="item-art" viewBox="0 0 120 120" data-art="bride" aria-hidden="true"></svg>
+          <div class="item-text">
+            <h3>Brudebuket</h3>
+            <p>Vi mødes og taler farver, kjole og sæson. Inklusiv knaphulsblomst til brudgommen.</p>
+          </div>
+          <p class="item-price">fra 895 kr.</p>
+          <a class="item-go" href="#lejligheder" aria-label="Læs om bryllupper">Læs mere</a>
+        </li>
+        <li class="item">
+          <svg class="item-art" viewBox="0 0 120 120" data-art="wreath" aria-hidden="true"></svg>
+          <div class="item-text">
+            <h3>Kranse og sorgbinderi</h3>
+            <p>Kranse, båredekorationer og håndbundne buketter, leveret direkte til kirken.</p>
+          </div>
+          <p class="item-price">fra 450 kr.</p>
+          <a class="item-go" href="#lejligheder" aria-label="Læs om sorgbinderi">Læs mere</a>
+        </li>
+        <li class="item">
+          <svg class="item-art" viewBox="0 0 120 120" data-art="sub" aria-hidden="true"></svg>
+          <div class="item-text">
+            <h3>Blomster hver fredag</h3>
+            <p>En sæsonbuket hver uge eller hver anden, til hjemmet eller til receptionen.</p>
+          </div>
+          <p class="item-price">229 kr. pr. gang</p>
+          <a class="item-go" href="#buket" data-preset="season" aria-label="Bestil abonnement">Bestil</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- BIND DIN BUKET (det levende) -->
+    <section class="builder" id="buket" aria-labelledby="builder-title">
+      <div class="builder-stage" aria-hidden="true">
+        <div class="bouquet-wrap"><svg class="bouquet" viewBox="0 0 400 520"></svg></div>
+      </div>
+      <form class="builder-form" id="builder" action="mailto:kontakt@yasminsblomster.dk" method="get">
+        <h2 id="builder-title" class="h2">Bind din buket</h2>
+        <p class="builder-lede">Vælg størrelse og farver, så binder vi den til dig. Du ser buketten tage form, mens du vælger.</p>
+
+        <fieldset>
+          <legend>Størrelse</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="size" value="S" data-price="249"><span>Lille<small>249 kr.</small></span></label>
+            <label class="choice"><input type="radio" name="size" value="M" data-price="349" checked><span>Mellem<small>349 kr.</small></span></label>
+            <label class="choice"><input type="radio" name="size" value="L" data-price="499"><span>Stor<small>499 kr.</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Farver</legend>
+          <div class="choices choices-colour">
+            <label class="choice"><input type="radio" name="tone" value="season" checked><span><i class="sw sw-season"></i>Yasmin vælger</span></label>
+            <label class="choice"><input type="radio" name="tone" value="white"><span><i class="sw sw-white"></i>Hvid og grøn</span></label>
+            <label class="choice"><input type="radio" name="tone" value="blush"><span><i class="sw sw-blush"></i>Rosa og fersken</span></label>
+            <label class="choice"><input type="radio" name="tone" value="red"><span><i class="sw sw-red"></i>Dybrød</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Hvordan får du den?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="how" value="pickup" checked><span>Henter i butikken<small>gratis</small></span></label>
+            <label class="choice"><input type="radio" name="how" value="delivery" data-price="59"><span>Levering<small>59 kr.</small></span></label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span>Hilsen på kortet</span>
+          <textarea name="card" rows="2" maxlength="160" placeholder="Tillykke med dagen, kære mor"></textarea>
+        </label>
+
+        <div class="builder-total">
+          <p><span>I alt</span> <strong data-total>349 kr.</strong></p>
+          <button class="btn" type="submit">Send bestilling</button>
+        </div>
+        <p class="builder-note">Knappen åbner en e-mail med din bestilling udfyldt. Vi svarer med bekræftelse og betaling via MobilePay.</p>
+      </form>
+    </section>
+
+    <!-- LEJLIGHEDER -->
+    <section class="occasions" id="lejligheder" aria-labelledby="occ-title">
+      <h2 id="occ-title" class="h2">Til de store dage</h2>
+      <div class="occ-list">
+        <article class="occ">
+          <h3 class="occ-name">Bryllup</h3>
+          <p>Brudebuket, knaphuller, borddekorationer og kirkeblomster. Vi tager et uforpligtende møde i butikken, gerne et halvt år før, og laver en prøvebuket, så I ved præcis, hvad I får.</p>
+        </article>
+        <article class="occ">
+          <h3 class="occ-name">Afsked</h3>
+          <p>Kranse, båredekorationer og buketter til bisættelse. Ring, så tager vi os af resten og leverer direkte til kirke eller kapel i hele Billund Kommune.</p>
+        </article>
+        <article class="occ">
+          <h3 class="occ-name">Firma</h3>
+          <p>Faste blomster til receptionen, gaver til medarbejdere og kunder, og dekorationer til julefrokosten. Vi sender én samlet faktura om måneden.</p>
+        </article>
+        <article class="occ">
+          <h3 class="occ-name">Konfirmation</h3>
+          <p>Bordpynt i festens farver og en buket til konfirmanden. Bestil i god tid: april og maj er vores travleste måneder.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUTIKKEN -->
+    <section class="visit" id="butikken" aria-labelledby="visit-title">
+      <div class="visit-grid">
+        <div class="visit-main">
+          <h2 id="visit-title" class="h2">Kom forbi Hovedgaden&nbsp;4</h2>
+          <p class="visit-lede">Butikken ligger midt i Sønder Omme, med parkering lige ved døren. Kig ind, dufte og få en buket bundet, mens du venter.</p>
+          <p class="visit-status" data-open-status-long>Åbningstider</p>
+          <div class="visit-actions">
+            <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Hovedgaden+4%2C+7260+S%C3%B8nder+Omme" target="_blank" rel="noopener">Vis vej</a>
+            <a class="link link-dark" href="tel:+4500000000">Ring til butikken</a>
+          </div>
+        </div>
+        <dl class="hours" aria-label="Åbningstider">
+          <div><dt>Mandag</dt><dd>10–17.30</dd></div>
+          <div><dt>Tirsdag</dt><dd>10–17.30</dd></div>
+          <div><dt>Onsdag</dt><dd>10–17.30</dd></div>
+          <div><dt>Torsdag</dt><dd>10–17.30</dd></div>
+          <div><dt>Fredag</dt><dd>10–18</dd></div>
+          <div><dt>Lørdag</dt><dd>9–13</dd></div>
+          <div><dt>Søndag</dt><dd>Lukket</dd></div>
+        </dl>
+        <address class="visit-address">
+          Yasmins Blomster<br>
+          Hovedgaden 4<br>
+          7260 Sønder Omme<br>
+          <a href="mailto:kontakt@yasminsblomster.dk">kontakt@yasminsblomster.dk</a>
+        </address>
+      </div>
+    </section>
+
+    <!-- SPØRGSMÅL -->
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="h2">Godt at vide</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Hvor langt leverer I?</summary>
+          <p>Vi leverer selv i Sønder Omme, Grindsted, Vorbasse, Billund og Filskov for 59 kr. Længere væk sender vi gennem et florist-netværk; spørg os om pris.</p>
+        </details>
+        <details>
+          <summary>Hvornår skal jeg bestille?</summary>
+          <p>Bestiller du inden kl. 12 på hverdage, kan vi levere samme dag. Til bryllupper og konfirmationer bør du kontakte os mindst fire uger før.</p>
+        </details>
+        <details>
+          <summary>Hvordan betaler jeg?</summary>
+          <p>I butikken med kort, MobilePay eller kontant. Bestiller du online, sender vi en MobilePay-anmodning, når vi har bekræftet buketten.</p>
+        </details>
+        <details>
+          <summary>Hvordan holder buketten længst?</summary>
+          <p>Skær stilkene skråt, brug en ren vase med lunkent vand og skift vandet hver anden dag. Stil den væk fra frugt og direkte sol.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="foot-name display" aria-hidden="true">Yasmins Blomster</p>
+    <div class="foot-row">
+      <p>Hovedgaden 4 · 7260 Sønder Omme</p>
+      <p>CVR 42539279</p>
+      <p><a href="#top">Til toppen</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
