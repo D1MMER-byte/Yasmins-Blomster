@@ -432,6 +432,40 @@
   const rowIndex = (st.wd + 6) % 7; // list starts on Monday
   rows[rowIndex]?.classList.add("is-today");
 
+  /* ---------- the shop photo opens like a door as it scrolls into view ---------- */
+  const frame = document.querySelector(".inside-frame");
+  if (frame) {
+    if (!reduce) {
+      let raf = 0;
+      const open = () => {
+        raf = 0;
+        const r = frame.getBoundingClientRect();
+        // 0 when the top of the frame enters the bottom of the screen, 1 when it is a third down the screen
+        const p = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight * 0.68)));
+        const e = 1 - Math.pow(1 - p, 3);
+        frame.style.setProperty("--p-inv", (1 - e).toFixed(4));
+      };
+      open();
+      addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(open); }, { passive: true });
+      addEventListener("resize", open);
+    }
+    // spots on the photo and rows in the list light each other up
+    const spots = [...frame.querySelectorAll(".spot")];
+    const rows = [...document.querySelectorAll(".inside-list li")];
+    const light = (key) => {
+      spots.forEach((s) => s.classList.toggle("is-on", s.dataset.spot === key));
+      rows.forEach((r) => r.classList.toggle("is-on", r.dataset.spot === key));
+    };
+    spots.forEach((s) => {
+      s.addEventListener("mouseenter", () => light(s.dataset.spot));
+      s.addEventListener("focus", () => light(s.dataset.spot));
+      s.addEventListener("click", () => light(s.classList.contains("is-on") && matchMedia("(hover: none)").matches ? null : s.dataset.spot));
+    });
+    rows.forEach((r) => r.addEventListener("mouseenter", () => light(r.dataset.spot)));
+    frame.addEventListener("mouseleave", () => light(null));
+    document.querySelector(".inside-list")?.addEventListener("mouseleave", () => light(null));
+  }
+
   /* ---------- entrances ---------- */
   const groups = [
     [".hero-text", ":scope > *"],
@@ -440,6 +474,7 @@
     [".shop-list", ":scope > li"],
     [".builder-form", ":scope > *"],
     ["#lejligheder", ":scope > .h2, .occ"],
+    [".inside-text", ":scope > .h2, .inside-lede, .inside-list > li"],
     [".visit-grid", ".visit-main > *, .hours, .visit-address"],
     [".faq", ":scope > .h2, details"],
     [".foot", ".foot-row"],

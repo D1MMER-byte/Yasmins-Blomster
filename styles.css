@@ -255,6 +255,45 @@ legend { font-weight: 500; margin-bottom: 14px; padding: 0; }
   .occ:nth-child(even) { margin-top: 0; }
 }
 
+/* Inside the shop: the photo opens like a door */
+.inside { padding: var(--gap-section) var(--m) 0; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px clamp(16px, 2.5vw, 40px); align-items: start; }
+.inside-photo { grid-column: 1 / span 7; }
+.inside-frame {
+  position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--ground-2);
+  clip-path: inset(calc(var(--p-inv, 0) * 10%) calc(var(--p-inv, 0) * 22%) 0 calc(var(--p-inv, 0) * 22%) round calc(var(--p-inv, 0) * 999px) calc(var(--p-inv, 0) * 999px) 0 0);
+}
+.inside-frame img { width: 100%; height: 100%; object-fit: cover; transform: scale(calc(1 + var(--p-inv, 0) * .14)); transform-origin: 50% 60%; }
+.inside-photo figcaption { margin-top: 14px; color: var(--ink-2); font-style: italic; font-family: var(--f-display); font-size: 1.15rem; }
+.spot {
+  position: absolute; left: var(--x); top: var(--y); width: 44px; height: 44px; margin: -22px 0 0 -22px; padding: 0;
+  border: 0; border-radius: 50%; background: transparent; cursor: pointer; color: var(--on-gold);
+  opacity: calc(1 - var(--p-inv, 0) * 4); transition: opacity .3s;
+}
+.spot::before, .spot::after { content: ""; position: absolute; inset: 13px; border-radius: 50%; background: var(--gold); }
+.spot::after { inset: 13px; opacity: .6; animation: ring 2.6s var(--ease-out) infinite; }
+@keyframes ring { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(2.6); opacity: 0; } }
+.spot span {
+  position: absolute; left: 34px; top: 50%; white-space: nowrap; pointer-events: none;
+  background: var(--gold); color: var(--on-gold); font: 500 .95rem/1 var(--f-text); padding: 9px 12px;
+  opacity: 0; transform: translate(-6px, -50%); transition: opacity .25s, transform .3s var(--ease-out);
+}
+.spot[style*="--x:8"] span { left: auto; right: 34px; transform: translate(6px, -50%); }
+.spot:hover span, .spot:focus-visible span, .spot.is-on span { opacity: 1; transform: translate(0, -50%); }
+.spot:hover::before, .spot.is-on::before { background: var(--gold-hi); }
+.inside-text { grid-column: 9 / span 4; position: sticky; top: 110px; }
+.inside-lede { margin-top: 28px; max-width: 30em; }
+.inside-list { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 6px; }
+.inside-list li { padding: 16px 18px; background: var(--ground-2); transition: background-color .25s, transform .3s var(--ease-out); cursor: default; }
+.inside-list li.is-on, .js .inside-list li.rv.in.is-on { background: var(--ground-3); transform: translateX(8px); }
+.inside-list h3 { font: 500 1.6rem/1.1 var(--f-display); color: var(--gold-hi); }
+.inside-list p { margin-top: 4px; }
+@media (max-width: 1100px) { .inside-photo { grid-column: 1 / span 6; } .inside-text { grid-column: 7 / span 6; } }
+@media (max-width: 860px) {
+  .inside-photo, .inside-text { grid-column: 1 / -1; }
+  .inside-text { position: static; }
+}
+@media (prefers-reduced-motion: reduce) { .spot::after { animation: none; } }
+
 /* Visit, a gold field */
 .visit { margin-top: var(--gap-section); background: var(--gold); color: var(--on-gold); padding: clamp(64px, 9vw, 140px) var(--m); }
 .visit-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px clamp(16px, 2.5vw, 40px); align-items: start; }
