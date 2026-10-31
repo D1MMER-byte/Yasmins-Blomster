@@ -466,9 +466,25 @@
     document.querySelector(".inside-list")?.addEventListener("mouseleave", () => light(null));
   }
 
+  /* ---------- the name rises letter by letter ---------- */
+  const word = document.querySelector(".hero-word");
+  if (word && !reduce) {
+    const txt = word.textContent;
+    word.textContent = "";
+    [...txt].forEach((ch, i) => {
+      const s = document.createElement("span");
+      s.textContent = ch;
+      word.appendChild(s);
+      s.animate(
+        [{ transform: "translateY(55%) rotate(4deg)", opacity: 0 }, { transform: "none", opacity: 1 }],
+        { duration: 1100, delay: 150 + i * 70, easing: "cubic-bezier(.2,.7,.2,1)", fill: "backwards" }
+      );
+    });
+  }
+
   /* ---------- entrances ---------- */
   const groups = [
-    [".hero-text", ":scope > *"],
+    [".hero-text", ":scope > :not(h1)"],
     [".name-grid", ":scope > .h2, .name-body > *, .name-plate"],
     [".shop-head", ":scope > *"],
     [".shop-list", ":scope > li"],
