@@ -165,6 +165,12 @@ a { color: inherit; }
   transition: background-color .3s var(--ease-out);
 }
 .item:hover { background: var(--ground-3); }
+.item:first-child { grid-template-columns: 220px minmax(0, 1fr) auto auto; padding: clamp(24px, 3vw, 40px); margin-bottom: 16px; background: var(--ground-3); }
+.item:first-child .item-art { width: 220px; height: 220px; }
+.item:first-child h3 { font-size: clamp(2.4rem, 4.4vw, 4rem); }
+.item:first-child .item-text p { font-size: 1.15rem; margin-top: 12px; }
+.item:first-child .item-price { font-size: clamp(1.6rem, 2.6vw, 2.3rem); }
+.item:first-child .item-go { background: var(--gold); color: var(--on-gold); min-height: 52px; padding: 0 26px; }
 .item-art { width: 120px; height: 120px; transition: transform .5s var(--ease-out); }
 .item:hover .item-art { transform: rotate(-6deg) scale(1.06); }
 .item h3 { font: 500 clamp(1.6rem, 2.6vw, 2.3rem)/1.05 var(--f-display); letter-spacing: -.01em; }
@@ -184,6 +190,9 @@ a { color: inherit; }
   .item-art { width: 80px; height: 80px; grid-row: span 2; align-self: start; }
   .item-price { grid-column: 2; }
   .item-go { grid-column: 1 / -1; justify-content: center; margin-top: 8px; }
+  .item:first-child { grid-template-columns: 1fr; padding: 24px 16px; }
+  .item:first-child .item-art { width: 160px; height: 160px; grid-row: auto; }
+  .item:first-child .item-price { grid-column: 1; }
 }
 
 /* Builder */
@@ -211,14 +220,14 @@ legend { font-weight: 500; margin-bottom: 14px; padding: 0; }
   background: var(--ground-3); color: var(--ink);
   transition: background-color .25s var(--ease-out), color .25s, transform .2s var(--ease-out);
 }
-.choice small { font-size: .85rem; color: var(--ink-2); margin-left: 6px; transition: color .25s; }
+.choice small { font-size: .9rem; color: var(--ink-2); margin-left: 6px; transition: color .25s; }
 .choice:hover span { background: #2a2f26; }
 .choice input:checked + span { background: var(--gold); color: var(--on-gold); }
 .choice input:checked + span small { color: var(--on-gold); }
 .choice input:focus-visible + span { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
 .choice:active span { transform: scale(.97); }
 .sw { width: 18px; height: 18px; border-radius: 50%; flex: none; }
-.sw-season { background: conic-gradient(#e9c46a 0 25%, #d98e8e 0 50%, #f3efe4 0 75%, #8f2d3a 0); }
+.sw-season { width: 0; height: 0; border: 9px solid; border-color: #e9c46a #d98e8e #f3efe4 #8f2d3a; }
 .sw-white { background: #f3efe4; }
 .sw-blush { background: #e7a9a0; }
 .sw-red { background: #8f2d3a; }
