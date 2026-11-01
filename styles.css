@@ -349,7 +349,7 @@ details p { padding: 0 24px 24px; max-width: 36em; }
 
 /* Footer */
 .foot { margin-top: var(--gap-section); padding: 0 var(--m) 32px; }
-.foot-name { font-size: clamp(2.6rem, 13.9vw, 15rem); color: var(--gold); line-height: .85; white-space: nowrap; }
+.foot-name { font-size: 30.3vw; color: var(--gold); line-height: .8; letter-spacing: -.035em; white-space: nowrap; }
 .foot-row { margin-top: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; color: var(--ink-2); }
 .foot-row a { color: var(--ink); }
 
